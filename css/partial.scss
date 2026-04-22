@@ -1,0 +1,23 @@
+/*Variabler*/
+$font: Garamond, serif;
+$bg-color: #f0f0f0;
+$safe-color: #1162A3;
+$danger-color:#FE1145;
+$text-color:#0E1A24;
+$border-color:#DFDFDF;
+$secondary-color:#A4A4A4;
+
+
+
+
+/*Mixins*/
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+}
+
+@mixin border-style($color) {
+    border-bottom: 1px solid $border-color;
+    
+}
