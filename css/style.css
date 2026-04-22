@@ -1,1 +1,14 @@
-/*# sourceMappingURL=style.css.map */
+/*Variabler*/
+/*Mixins*/
+/*partial fil hentes ind i style.scss som et modul. Filen er en samling af variabler, mixins og funktioner som kan genbruges*/
+/*-------------------------- body og main ----------------------------*/
+body {
+  padding: 0;
+  font-family: Garamond, serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*-------------------------- stages------------------------*/
+/*-------------------------- media query-------------------*//*# sourceMappingURL=style.css.map */
