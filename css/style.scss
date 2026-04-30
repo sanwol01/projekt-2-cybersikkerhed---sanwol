@@ -1,19 +1,127 @@
-@use 'partial'; /*partial fil hentes ind i style.scss som et modul. Filen er en samling af variabler, mixins og funktioner som kan genbruges*/
+@use 'partial'; 
+/*partial fil hentes ind i style.scss som et modul. Filen er en samling af variabler, mixins og funktioner som kan genbruges*/
 
 
-/*-------------------------- body og main ----------------------------*/
+/*-------------------------- generel styling ----------------------------*/
+
+
 body{
     padding: 0;
     font-family: partial.$font;
     background-color: partial.$bg-color;
     margin: 0;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+    width: 100vw;
+}
 
 
 
-    /*-------------------------- stages------------------------*/
 
-    
+
+  /*-------------------------- stages------------------------*/
+
+ /*-- scene 0 --*/ 
+
+.velkomst{
+   padding: 2rem 5vw;
+   min-height: 600px;
+
+      h1{
+      color: partial.$safe-color;
+      }
+
+      p{
+         text-align: center;
+      }
+}
+
+/*-- scene 1 --*/
+.inbox{
+   display: grid;
+   width: 100vw;
+   grid-template-areas: 
+      "tekst tekst"
+      "logo logo"
+      "mailnav indbakke"
+      "footer footer";
+   grid-template-columns: 1fr 5fr;
+   grid-template-rows: 300px 150px 400px 50px;
+   
+      
+
+      .tekst{
+      color: partial.$font;
+      border-bottom: 1px solid #A4A4A4;
+      grid-area: tekst;
+      background-color: aqua;
+      }
+
+      .logo{
+      grid-area: logo;
+      background-color: blueviolet;
+
+         img{
+            max-width: 100%;
+            height: auto;
+         }
+      }
+
+      .mailnav{
+      background-color: fuchsia;
+      @include partial.listStyle;
+
+      grid-area: mailnav;
+
+
+         ul{
+            list-style-type: none;
+            margin: 2rem 1rem;
+            
+            
+               li{
+                  color: partial.$secondary-color;
+                  margin-bottom: 1rem;
+
+                     i{
+                        margin-right: 0.5em;
+                     }
+                  
+               }
+
+               li:hover{
+                  color: partial.$text-color;
+               }
+            
+         }
+      }
+
+      .indbakke{
+      grid-area: indbakke;
+      }
+
+      footer{
+        grid-area: footer; 
+        background-color: partial.$safe-color;
+        
+     }
+}
+
+
+
+  
+
+  
+
+
+
+
+  
+     
+
+
+  
+
+
 
 
 

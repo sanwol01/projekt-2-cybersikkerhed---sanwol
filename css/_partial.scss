@@ -1,5 +1,5 @@
 /*Variabler*/
-$font: Garamond, serif;
+$font: Verdana, Arial, sans-serif;
 $bg-color: #f0f0f0;
 $safe-color: #1162A3;
 $danger-color:#FE1145;
@@ -17,6 +17,12 @@ $secondary-color:#A4A4A4;
 }
 
 @mixin border-style($color) {
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $secondary-color;
     
+}
+
+@mixin listStyle {
+     list-style: none;
+     text-decoration: none;
+     margin: 0 0 0 1em;
 }
